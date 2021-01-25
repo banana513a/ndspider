@@ -11,8 +11,9 @@
 # 启动说明：
 ##1、配置
 ###	1.1、站点配置：
-```
+
 	src/main/java/com/ndcf/spider/crawler/executor/siteconfig/CralwerExample1Config.java （继承src/main/java/com/ndcf/spider/crawler/executor/siteconfig/CralwerConfig.java）
+```
 	    // 继承CralwerConfig，需要初始化的参数
 	    public static String URL = "http://www.example1.com/";  // 设置需要爬取的站点url，（遍历网页内所有的url并筛选符合条件的url放入队列。）
 	    //    public static String regUrlConStr = "\\S*(?:" + SITE_NAME + ")((?!css|js|:void)\\S)*";   //遍历网页内所有的url的过滤正则,不填则不过滤
@@ -28,7 +29,8 @@
 ###	1.3、代理IP设置
 	src/main/java/com/ndcf/spider/crawler/IpConfigManager.java中初始化或动态添加；
 	初始化： addProxyIpOnStatic() 中添加初始化的代理IP，注意默认需添加new IpNode("127.0.0.1", "9999")，这里把本地IP也当作代理IP便于与代理IP统一处理;
-##2、启动
+	
+## 2、启动
 启动类：src/main/java/com/ndcf/spider/NdspiderApplication.java 或者 src/main/java/com/ndcf/spider/crawler/executor/Startor.java
 
 ## 保存的资源路径：
@@ -36,7 +38,6 @@ G:\202011\sitename\files -- 爬取站点的资源路径
 G:\202011\sitename\siteconfig -- 爬取站点的url相关信息
 G:\202011\conmonConfig -- 站点的代理IP统计信息
 
-#
 
 # 待
 
