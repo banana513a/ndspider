@@ -1,9 +1,8 @@
 # JAVA爬虫（可配置站点快速爬取，支持自动切换代理IP，支持htmlunit、httpclient等切换）
-
+#  https://github.com/banana513a/ndspider
 ## 1、 遍历网页内所有的url并筛选符合条件的url放入队列。
 ## 2、 频率控制，次数及时间，每天每个IP访问次数限制在100次内，且设置cookie和随机睡眠；每个IP不要多线程并发爬；爬虫增加IP代理、伪装UA、AI识别;数据抓取的过程中使用伪造device_id绕过服务器的身份校验，使用伪造UA及IP绕过服务器的访问频率限制;
-## 3、 代理线程池，（更新代理IpConfigManager.idleIpNodes ，然后通知注册的监听方法RefreshIpListener.onRefreshIpCompelete；）
-			代理IP自动切换；每个IP每天达到设定的指定次数或者失败指定次数自动切换。
+## 3、 代理线程池，（更新代理IpConfigManager.idleIpNodes ，然后通知注册的监听方法RefreshIpListener.onRefreshIpCompelete；）;代理IP自动切换；每个IP每天达到设定的指定次数或者失败指定次数自动切换。
 ## 4、 可配置Config,快速爬取通用的网站（公开不需要登陆验证等）。
 ## 5、 纯Java，没有依赖数据库（后期考虑用Mysql、Mongodb、redis）；
 
@@ -41,9 +40,9 @@ G:\202011\conmonConfig -- 站点的代理IP统计信息
 
 # 待
 
-## 1、日志，每个请求信息都要记录，比如代理IP、请求地址，请求时间及完成时间，是否成功，
-## 2、数据一致性：宕机或者异常中断导致数据不一致，日志优先，完成或再记录日志，通过处理前和处理后、数据文件再做一致性校验；
-## 3、定时任务跑，每天短息汇总消息通知，短信异常通知，
+## 1、日志，
+## 2、数据一致性以及宕机处理；
+## 3、短信异常通知，
 ## 4、后期考虑用Mysql、Mongodb、redis，目前是把站点所有url加载到内存中，爬取大站点后期可能比较吃内存。
 ## 5、保存路径自动区分windows和linux文件路径，
 ## 6、切日的测试，相关站点次数和代理IP的；
