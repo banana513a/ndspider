@@ -1,9 +1,9 @@
 # JAVA爬虫（可配置站点快速爬取，支持自动切换代理IP，支持htmlunit、httpclient等切换）
 #  https://github.com/banana513a/ndspider
-## 1、 遍历网页内所有的url并筛选符合条件的url放入队列。
-## 2、 频率控制，次数及时间，每天每个IP访问次数限制在100次内，且设置cookie和随机睡眠；每个IP不要多线程并发爬；爬虫增加IP代理、伪装UA、AI识别;数据抓取的过程中使用伪造device_id绕过服务器的身份校验，使用伪造UA及IP绕过服务器的访问频率限制;
-## 3、 代理线程池，（更新代理IpConfigManager.idleIpNodes ，然后通知注册的监听方法RefreshIpListener.onRefreshIpCompelete；）;代理IP自动切换；每个IP每天达到设定的指定次数或者失败指定次数自动切换。
-## 4、 可配置Config,快速爬取通用的网站（公开不需要登陆验证等）。
+## 1、遍历网页内所有的url并筛选符合条件的url放入队列。
+## 2、 频率控制，每天每个IP访问次数限制在XX次内;
+## 3、代理线程池，（更新代理IpConfigManager.idleIpNodes ，然后通知注册的监听方法RefreshIpListener.onRefreshIpCompelete；）;代理IP自动切换；每个IP每天达到设定的指定次数或者失败指定次数自动切换。
+## 4、 可配置Config,快速爬取网站。
 ## 5、 纯Java，没有依赖数据库（后期考虑用Mysql、Mongodb、redis）；
 
 
